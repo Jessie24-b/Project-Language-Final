@@ -52,3 +52,5 @@ Employee application/Employee application/obj/project.nuget.cache
 Employee application/.vs/Employee application/config/applicationhost.config
 
 Employee application/.vs/Employee application/DesignTimeBuild/.dtbcache.v2
+
+Employee application/Employee application/obj/Debug/netcoreapp3.1/Employee application.csproj.CoreCompileInputs.cache
