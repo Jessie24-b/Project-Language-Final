@@ -48,3 +48,7 @@ Employee application/Employee application/obj/Employee application.csproj.nuget.
 Employee application/Employee application/obj/project.assets.json
 
 Employee application/Employee application/obj/project.nuget.cache
+
+Employee application/.vs/Employee application/config/applicationhost.config
+
+Employee application/.vs/Employee application/DesignTimeBuild/.dtbcache.v2
