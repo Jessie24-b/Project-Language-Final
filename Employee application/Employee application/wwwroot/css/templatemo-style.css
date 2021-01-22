@@ -994,15 +994,57 @@ https://templatemo.com/tm-516-known
     }
   }
 
-#register-employee {
+/*  Codigo agregado*/
+
+.section-size {
     width: 100%;
 }
 
-#title-register{
+.center {
     text-align: center;
 }
 
-#name-employee {
+.margin-top{
+    margin-top: 20px;
+}
+
+.title-register{
+    text-align: center;
+}
+
+.full-name-employee {
     width: 200px;
 }
+
+#email-employee {
+    width: 607px;
+    height: 35px;
+}
+
+.password-employee {
+    width: 302px;
+}
+
+.dimension {
+    height: 35px;
+}
+
+#cbTelefonia-movil {
+    margin-left: 250px;
+}
+
+#cbTelefonia-fija {
+    margin-left: 90px;
+}
+
+#cbCable {
+    margin-left: 90px;
+}
+
+#cbInternet {
+    margin-left: 90px;
+}
+
+
+
   
