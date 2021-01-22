@@ -1,0 +1,74 @@
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\bin\Debug\netcoreapp3.1\Employee application.exe
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\bin\Debug\netcoreapp3.1\Employee application.deps.json
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\bin\Debug\netcoreapp3.1\Employee application.runtimeconfig.json
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\bin\Debug\netcoreapp3.1\Employee application.runtimeconfig.dev.json
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\bin\Debug\netcoreapp3.1\Employee application.dll
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\bin\Debug\netcoreapp3.1\Employee application.pdb
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\bin\Debug\netcoreapp3.1\Employee application.Views.dll
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\bin\Debug\netcoreapp3.1\Employee application.Views.pdb
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.csprojAssemblyReference.cache
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.AssemblyInfoInputs.cache
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.AssemblyInfo.cs
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.csproj.CoreCompileInputs.cache
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.RazorAssemblyInfo.cache
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.RazorAssemblyInfo.cs
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\staticwebassets\Employee application.StaticWebAssets.Manifest.cache
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\staticwebassets\Employee application.StaticWebAssets.xml
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\scopedcss\bundle\Employee application.styles.css
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.TagHelpers.input.cache
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.TagHelpers.output.cache
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.RazorCoreGenerate.cache
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.RazorTargetAssemblyInfo.cache
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.RazorTargetAssemblyInfo.cs
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.Views.pdb
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.dll
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.pdb
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.genruntimeconfig.cache
+C:\Users\fofo1\Desktop\Proyecto Lenguajes\Final-language-project\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.csproj.CopyComplete
+C:\Users\fofo1\Desktop\Employee application\Employee application\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\fofo1\Desktop\Employee application\Employee application\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\fofo1\Desktop\Employee application\Employee application\bin\Debug\netcoreapp3.1\Employee application.exe
+C:\Users\fofo1\Desktop\Employee application\Employee application\bin\Debug\netcoreapp3.1\Employee application.deps.json
+C:\Users\fofo1\Desktop\Employee application\Employee application\bin\Debug\netcoreapp3.1\Employee application.runtimeconfig.json
+C:\Users\fofo1\Desktop\Employee application\Employee application\bin\Debug\netcoreapp3.1\Employee application.runtimeconfig.dev.json
+C:\Users\fofo1\Desktop\Employee application\Employee application\bin\Debug\netcoreapp3.1\Employee application.dll
+C:\Users\fofo1\Desktop\Employee application\Employee application\bin\Debug\netcoreapp3.1\Employee application.pdb
+C:\Users\fofo1\Desktop\Employee application\Employee application\bin\Debug\netcoreapp3.1\Employee application.Views.dll
+C:\Users\fofo1\Desktop\Employee application\Employee application\bin\Debug\netcoreapp3.1\Employee application.Views.pdb
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.csprojAssemblyReference.cache
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.AssemblyInfoInputs.cache
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.AssemblyInfo.cs
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.csproj.CoreCompileInputs.cache
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.RazorAssemblyInfo.cache
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.RazorAssemblyInfo.cs
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\staticwebassets\Employee application.StaticWebAssets.Manifest.cache
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\staticwebassets\Employee application.StaticWebAssets.xml
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\scopedcss\bundle\Employee application.styles.css
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.TagHelpers.input.cache
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.TagHelpers.output.cache
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.RazorCoreGenerate.cache
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.RazorTargetAssemblyInfo.cache
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.RazorTargetAssemblyInfo.cs
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.Views.pdb
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.dll
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.pdb
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.genruntimeconfig.cache
+C:\Users\fofo1\Desktop\Employee application\Employee application\obj\Debug\netcoreapp3.1\Employee application.csproj.CopyComplete
