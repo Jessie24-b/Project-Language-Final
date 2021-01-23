@@ -33,216 +33,259 @@
 </div>
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
-    <!-- PRE LOADER -->
-    <section class="preloader">
-        <div class="spinner">
 
-            <span class="spinner-rotate"></span>
+    <!-- LOGIN -->
+    <div id="login">
+        <section id="login-employee">
+            <div class="container">
+                <div id="centrar" class="row center section-size">
 
-        </div>
-    </section>
-
-
-    <!-- MENU -->
-    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
-        <div class="container">
-
-            <div class="navbar-header">
-                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon icon-bar"></span>
-                    <span class="icon icon-bar"></span>
-                    <span class="icon icon-bar"></span>
-                </button>
-
-                <!-- lOGO TEXT HERE -->
-                <a href="#" class="navbar-brand">Known</a>
-            </div>
-
-            <!-- MENU LINKS -->
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-nav-first">
-                    <li><a href="#top" class="smoothScroll">Home</a></li>
-                    <li><a href="#register-employee" class="smoothScroll">Register Employee</a></li>
-                </ul>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><i class="fa fa-phone"></i> +65 2244 1100</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- HOME -->
-    <section id="home">
-        <div class="row">
-
-            <div class="owl-carousel owl-theme home-slider">
-                <div class="item item-first">
-                    <div class="caption">
-                        <div class="container">
-                            <div class="col-md-6 col-sm-12">
-                                <h1>Distance Learning Education Center</h1>
-                                <h3>Our online courses are designed to fit in your industry supporting all-round with latest technologies.</h3>
-                                <a href="#feature" class="section-btn btn btn-default smoothScroll">Discover more</a>
-                            </div>
+                    <div id="login-employee-form" class="col-md-6 col-sm-12 center font-of-login">
+                        <div class="section-title center">
+                            <h2 class="color-white">Login Employees</h2>
                         </div>
-                    </div>
-                </div>
 
-                <div class="item item-second">
-                    <div class="caption">
-                        <div class="container">
-                            <div class="col-md-6 col-sm-12">
-                                <h1>Start your journey with our practical courses</h1>
-                                <h3>Our online courses are built in partnership with technology leaders and are designed to meet industry demands.</h3>
-                                <a href="#courses" class="section-btn btn btn-default smoothScroll">Take a course</a>
-                            </div>
+                        <div class="col-md-12 col-sm-12 center">
+                            <input type="email" id="email-login" class="borders" placeholder="Enter email address" required="">
                         </div>
-                    </div>
-                </div>
 
-                <div class="item item-third">
-                    <div class="caption">
-                        <div class="container">
-                            <div class="col-md-6 col-sm-12">
-                                <h1>Efficient Learning Methods</h1>
-                                <h3>Nam eget sapien vel nibh euismod vulputate in vel nibh. Quisque eu ex eu urna venenatis sollicitudin ut at libero. Visit <a rel="nofollow" href="https://www.facebook.com/templatemo">templatemo</a> page.</h3>
-                                <a href="#contact" class="section-btn btn btn-default smoothScroll">Let's chat</a>
-                            </div>
+                        <div class="col-md-12 col-sm-12 center margin-top">
+                            <input type="password" id="password-employee" class="password-employee dimension borders" placeholder="Password" />
+
                         </div>
+
+
+                        <div class="col-md-12 col-sm-12  margin-top">
+                            <button id="btn-login-employee" class="password-employee dimension borders" onclick="return Mostrar()">Log in</button>
+                            <button id="btn-cancel-login" class="password-employee dimension borders">Cancel Register</button>
+                        </div>
+
                     </div>
+
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+
+    <div id="all-information" class="hide">
+        <!-- PRE LOADER -->
+        <section class="preloader">
+            <div class="spinner">
+
+                <span class="spinner-rotate"></span>
+
+            </div>
+        </section>
 
 
 
-    <!-- REGISTER RMPLOYEE -->
 
-    <section id="register-employee">
-        <div class="container">
+
+        <!-- MENU -->
+        <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon icon-bar"></span>
+                        <span class="icon icon-bar"></span>
+                        <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="#" class="navbar-brand">Known</a>
+                </div>
+
+                <!-- MENU LINKS -->
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                        <li><a href="#top" class="smoothScroll">Home</a></li>
+                        <li><a href="#register-employee" class="smoothScroll">Register Employee</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><i class="fa fa-phone"></i> +65 2244 1100</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- HOME -->
+        <section id="home">
             <div class="row">
 
-                <div id="register-employee-form" class="col-md-6 col-sm-12 section-size">
-                    <div id="title-register" class="section-title title-register">
-                        <h2>Register employees</h2>
-                    </div>
-                    <div id="full-name" class="col-md-12 col-sm-12 center">
-                        <input type="text" id="name-employee" class="full-name-employee dimension" placeholder="Name" />
-                        <input type="text" id="first-name-employee" class="full-name-employee dimension" placeholder="First Name" />
-                        <input type="text" id="second-name-employee" class="full-name-employee dimension" placeholder="Second Name" />
-
-
-                    </div>
-                    <div class="col-md-12 col-sm-12 center margin-top">
-                        <input type="email" id="email-employee" placeholder="Enter email address" required="">
-                    </div>
-                    <div class="col-md-12 col-sm-12 center margin-top">
-                        <input type="password" id="password-employee" class="password-employee dimension" placeholder="Password" />
-                        <input type="password" id="confirm-password-employee" class="password-employee dimension" placeholder="Confirm Password" />
-                    </div>
-                    <div class="col-md-12 col-sm-12 center margin-top">
-                        <select id="ocupation-employee" class="password-employee dimension">
-                            <option>Ocupacion</option>
-                            <option>Supervisor</option>
-                            <option>Soportista</option>
-                        </select>
-                        <select id="supervisor-employee" class="password-employee dimension">
-                            <option>Superior</option>
-                        </select>
-                    </div>
-                    <div id="service" class="col-md-12 col-sm-12 margin-top">
-                        <input type="checkbox" id="cbTelefonia-movil"> Telefonia Movil
-                        <input type="checkbox" id="cbTelefonia-fija"> Telefonia Fija
-                        <input type="checkbox" id="cbCable"> Cable
-                        <input type="checkbox" id="cbInternet"> Internet
-                    </div>
-                    <div class="col-md-12 col-sm-12 center margin-top">
-                        <button id="btn-register-employee" class="password-employee dimension">Register Employee</button>
-                        <button id="btn-cancel-employee" class="password-employee dimension">Cancel Register</button>
+                <div class="owl-carousel owl-theme home-slider">
+                    <div class="item item-first">
+                        <div class="caption">
+                            <div class="container">
+                                <div class="col-md-6 col-sm-12">
+                                    <h1>Distance Learning Education Center</h1>
+                                    <h3>Our online courses are designed to fit in your industry supporting all-round with latest technologies.</h3>
+                                    <a href="#feature" class="section-btn btn btn-default smoothScroll">Discover more</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
+                    <div class="item item-second">
+                        <div class="caption">
+                            <div class="container">
+                                <div class="col-md-6 col-sm-12">
+                                    <h1>Start your journey with our practical courses</h1>
+                                    <h3>Our online courses are built in partnership with technology leaders and are designed to meet industry demands.</h3>
+                                    <a href="#courses" class="section-btn btn btn-default smoothScroll">Take a course</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item item-third">
+                        <div class="caption">
+                            <div class="container">
+                                <div class="col-md-6 col-sm-12">
+                                    <h1>Efficient Learning Methods</h1>
+                                    <h3>Nam eget sapien vel nibh euismod vulputate in vel nibh. Quisque eu ex eu urna venenatis sollicitudin ut at libero. Visit <a rel="nofollow" href="https://www.facebook.com/templatemo">templatemo</a> page.</h3>
+                                    <a href="#contact" class="section-btn btn btn-default smoothScroll">Let's chat</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
 
+        <!-- REGISTER RMPLOYEE -->
+        <section id="register-employee">
+            <div class="container">
+                <div class="row">
 
-    <!-- FOOTER -->
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="footer-info">
-                        <div class="section-title">
-                            <h2>Headquarter</h2>
+                    <div id="register-employee-form" class="col-md-6 col-sm-12 section-size">
+                        <div class="section-title center">
+                            <h2>Register employees</h2>
                         </div>
-                        <address>
-                            <p>1800 dapibus a tortor pretium,<br> Integer nisl dui, ABC 12000</p>
-                        </address>
+                        <div id="full-name" class="col-md-12 col-sm-12 center">
+                            <input type="text" id="name-employee" class="full-name-employee dimension" placeholder="Name" />
+                            <input type="text" id="first-name-employee" class="full-name-employee dimension" placeholder="First Name" />
+                            <input type="text" id="second-name-employee" class="full-name-employee dimension" placeholder="Second Name" />
 
-                        <ul class="social-icon">
-                            <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-instagram"></a></li>
-                        </ul>
 
-                        <div class="copyright-text">
-                            <p>Copyright &copy; 2019 Company Name</p>
-
-                            <p>Design: TemplateMo</p>
                         </div>
+                        <div class="col-md-12 col-sm-12 center margin-top">
+                            <input type="email" id="email-employee" placeholder="Enter email address" required="">
+                        </div>
+                        <div class="col-md-12 col-sm-12 center margin-top">
+                            <input type="password" id="input-employee" class="input-employee dimension" placeholder="Password" />
+                            <input type="password" id="confirm-input-employee" class="input-employee dimension" placeholder="Confirm Password" />
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 center margin-top">
+                            <select id="ocupation-employee" class="input-employee dimension">
+                                <option>Ocupacion</option>
+                                <option>Supervisor</option>
+                                <option>Soportista</option>
+                            </select>
+                            <select id="supervisor-employee" class="input-employee dimension">
+                                <option>Superior</option>
+                            </select>
+                        </div>
+
+                        <div id="service" class="col-md-12 col-sm-12 margin-top center">
+                            <input type="checkbox" id="cbTelefonia-movil"> Telefonia Movil
+                            <input type="checkbox" id="cbTelefonia-fija"> Telefonia Fija
+                            <input type="checkbox" id="cbCable"> Cable
+                            <input type="checkbox" id="cbInternet"> Internet
+                        </div>
+                        <div class="col-md-12 col-sm-12 center margin-top">
+                            <button id="btn-register-employee" class="input-employee dimension">Register Employee</button>
+                            <button id="btn-cancel-employee" class="input-employee dimension">Cancel Register</button>
+                        </div>
+
                     </div>
+
                 </div>
+            </div>
+        </section>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="footer-info">
-                        <div class="section-title">
-                            <h2>Contact Info</h2>
-                        </div>
-                        <address>
-                            <p>+65 2244 1100, +66 1800 1100</p>
-                            <p><a href="mailto:youremail.co">hello@youremail.co</a></p>
-                        </address>
 
-                        <div class="footer_menu">
-                            <h2>Quick Links</h2>
-                            <ul>
-                                <li><a href="#">Career</a></li>
-                                <li><a href="#">Investor</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Refund Policy</a></li>
+
+        <!-- FOOTER -->
+        <!--<footer id="footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="footer-info">
+                            <div class="section-title">
+                                <h2>Headquarter</h2>
+                            </div>
+                            <address>
+                                <p>1800 dapibus a tortor pretium,<br> Integer nisl dui, ABC 12000</p>
+                            </address>
+
+                            <ul class="social-icon">
+                                <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-4 col-sm-12">
-                    <div class="footer-info newsletter-form">
-                        <div class="section-title">
-                            <h2>Newsletter Signup</h2>
-                        </div>
-                        <div>
-                            <div class="form-group">
-                                <form action="#" method="get">
-                                    <input type="email" class="form-control" placeholder="Enter your email" name="email" id="email" required="">
-                                    <input type="submit" class="form-control" name="submit" id="form-submit" value="Send me">
-                                </form>
-                                <span><sup>*</sup> Please note - we do not spam your email.</span>
+                            <div class="copyright-text">
+                                <p>Copyright &copy; 2019 Company Name</p>
+
+                                <p>Design: TemplateMo</p>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                    <div class="col-md-4 col-sm-6">
+                        <div class="footer-info">
+                            <div class="section-title">
+                                <h2>Contact Info</h2>
+                            </div>
+                            <address>
+                                <p>+65 2244 1100, +66 1800 1100</p>
+                                <p><a href="mailto:youremail.co">hello@youremail.co</a></p>
+                            </address>
+
+                            <div class="footer_menu">
+                                <h2>Quick Links</h2>
+                                <ul>
+                                    <li><a href="#">Career</a></li>
+                                    <li><a href="#">Investor</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a href="#">Refund Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                        <div class="footer-info newsletter-form">
+                            <div class="section-title">
+                                <h2>Newsletter Signup</h2>
+                            </div>
+                            <div>
+                                <div class="form-group">
+                                    <form action="#" method="get">
+                                        <input type="email" class="form-control" placeholder="Enter your email" name="email" id="email" required="">
+                                        <input type="submit" class="form-control" name="submit" id="form-submit" value="Send me">
+                                    </form>
+                                    <span><sup>*</sup> Please note - we do not spam your email.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>-->
+
+
+
+    </div>
+
 
 
     <!-- SCRIPTS -->

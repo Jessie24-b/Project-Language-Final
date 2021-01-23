@@ -119,7 +119,7 @@ https://templatemo.com/tm-516-known
 
   .entry-form {
     background: #252020;
-    border-radius: 100%;
+    border-radius: 20%;
     text-align: center;
     padding: 6em;
     width: 450px;
@@ -146,8 +146,6 @@ https://templatemo.com/tm-516-known
     border-radius: 50px;
     border: 0;
     color: #252020;
-    width: 50%;
-    height: 50px;
     margin: 30px auto;
     margin-bottom: 10px;
   }
@@ -1008,10 +1006,6 @@ https://templatemo.com/tm-516-known
     margin-top: 20px;
 }
 
-.title-register{
-    text-align: center;
-}
-
 .full-name-employee {
     width: 200px;
 }
@@ -1021,7 +1015,7 @@ https://templatemo.com/tm-516-known
     height: 35px;
 }
 
-.password-employee {
+.input-employee {
     width: 302px;
 }
 
@@ -1029,9 +1023,6 @@ https://templatemo.com/tm-516-known
     height: 35px;
 }
 
-#cbTelefonia-movil {
-    margin-left: 250px;
-}
 
 #cbTelefonia-fija {
     margin-left: 90px;
@@ -1044,6 +1035,51 @@ https://templatemo.com/tm-516-known
 #cbInternet {
     margin-left: 90px;
 }
+
+
+.font-of-login {
+    background: #252020;
+    width: 500px;
+    height: 300px;
+    border-radius:40px;
+    
+}
+
+#email-login {
+    width: 300px;
+    height: 35px;
+}
+
+.color-white{
+    color:white;
+}
+#centrar {
+    padding-left: 30%;
+}
+
+.borders{
+    border-radius:15px;
+}
+
+#btn-login-employee {
+    margin-right: 30px;
+    width: 150px;
+}
+
+#btn-cancel-login {
+    width: 150px;
+}
+#password-employee {
+    width: 300px;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+
 
 
 

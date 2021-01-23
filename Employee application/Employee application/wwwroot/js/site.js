@@ -23,7 +23,7 @@ function LlenarCombo() {
 }
 
 function CargarCombo() {
-    let array = ["Supervisor", "Soportista"];
+    var array = ["Supervisor", "Soportista"];
     var combo = document.getElementById('ocupation-employed');
 
     for (var i = 0; i < array.length; i++) {
@@ -33,4 +33,9 @@ function CargarCombo() {
         combo.appendChild(option);
     }
 
+}
+
+function Mostrar() {
+    document.getElementById("login").classList.add("hide");
+    document.getElementById("all-information").classList.remove("hide");
 }
