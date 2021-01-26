@@ -1,4 +1,4 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
@@ -7,15 +7,14 @@ $(document).ready(function () {
     CargarCombo();
 });
 
-//llena el combobox seleccionado de manera dinamica con los valores que esten dentro del array
 function CargarCombo() {
-    var array = ["mame", "picha"];
-    var combo = document.getElementById('ocupation-employee');
+    var array = ["Supervisor", "Soportista"];
+    var combo = document.getElementById('ocupation-employed');
 
     for (var i = 0; i < array.length; i++) {
-        var option = document.createElement("option");
-        option.value = array[i];
-        option.text = array[i];
+        var option2 = document.createElement("option");
+        option.value = array[i].ToString();
+        option.text = array[i].ToString();
         combo.appendChild(option);
     }
 
@@ -105,4 +104,35 @@ function CheckLogin() {
             //confirmacion de contraseña incorrecta 
         }
 }
+
+
+function LoadRequest() {
+    $.ajax({
+        url: "/Home/GetRequest-metodo de controller que trae las solicitudes",
+        type: "GET",
+        contentType: "application/json;charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            var html = '';
+            $.each(result, function (key, item) {
+                html += '<tr>';
+                html += '<td>' + item.reportId + '</td>';
+                html += '<td>' + item.reportClasification + '</td>';
+                html += '<td>' + item.full + '</td>';
+                html += '<td>' + item.reportDataTime + '</td>';
+                //falta hacer metodos que mandarian la asignacion de la consulta a sus respectivos soportistas
+                html += '<td><a href="#"  onclick="ViewRequest(' + item.reportId + ')">Solve</a> </td>';
+            });
+            $('.tbody').html(html);
+
+        },
+        error: function (errorMessage) {
+            alert(errorMessage.responseText);
+        }
+    })
+
+}
+
+
+
 */
