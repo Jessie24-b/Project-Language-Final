@@ -4,32 +4,18 @@
 // Write your JavaScript code.
 
 $(document).ready(function () {
-    //LlenarCombo();
     CargarCombo();
 });
 
-function LlenarCombo() {
-    var combo = document.getElementById('ocupation-employed');
-
-    var option = document.createElement("option");
-    option.value = "Supervisor";
-    option.text = "Supervisor"
-    combo.appendChild(option);
-
-    var option2 = document.createElement("option");
-    option2.value = "Soportista";
-    option2.text = "Soportista"
-    combo.appendChild(option2);
-}
-
+//llena el combobox seleccionado de manera dinamica con los valores que esten dentro del array
 function CargarCombo() {
-    var array = ["Supervisor", "Soportista"];
-    var combo = document.getElementById('ocupation-employed');
+    var array = ["mame", "picha"];
+    var combo = document.getElementById('ocupation-employee');
 
     for (var i = 0; i < array.length; i++) {
-        var option2 = document.createElement("option");
-        option.value = array[i].ToString();
-        option.text = array[i].ToString();
+        var option = document.createElement("option");
+        option.value = array[i];
+        option.text = array[i];
         combo.appendChild(option);
     }
 
