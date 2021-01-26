@@ -104,7 +104,11 @@ function CheckLogin() {
             //confirmacion de contraseña incorrecta 
         }
 }
+<<<<<<< Updated upstream
 
+=======
+*/
+>>>>>>> Stashed changes
 
 function LoadRequest() {
     $.ajax({
@@ -116,12 +120,21 @@ function LoadRequest() {
             var html = '';
             $.each(result, function (key, item) {
                 html += '<tr>';
+<<<<<<< Updated upstream
                 html += '<td>' + item.reportId + '</td>';
                 html += '<td>' + item.reportClasification + '</td>';
                 html += '<td>' + item.full + '</td>';
                 html += '<td>' + item.reportDataTime + '</td>';
                 //falta hacer metodos que mandarian la asignacion de la consulta a sus respectivos soportistas
                 html += '<td><a href="#"  onclick="ViewRequest(' + item.reportId + ')">Solve</a> </td>';
+=======
+                html += '<td>' + item.clientId + '</td>';
+                html += '<td>' + item.clientName + '</td>';
+                html += '<td>' + item.reportId + '</td>';
+                html += '<td>' + item.reportClasification + '</td>';
+                html += '<td>' + item.reportDataTime + '</td>';
+                html += '<td><a href="#"  onclick="Resolver consulta(' + item.reportId + ')">Solve</a> | <a href="#" onclick="asignar consulta(' + item.reportId + ')">To Assign</a></td>';
+>>>>>>> Stashed changes
             });
             $('.tbody').html(html);
 
@@ -131,8 +144,12 @@ function LoadRequest() {
         }
     })
 
+<<<<<<< Updated upstream
 }
 
 
 
 */
+=======
+}
+>>>>>>> Stashed changes
