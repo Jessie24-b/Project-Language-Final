@@ -92,3 +92,5 @@ Employee application/Employee application/bin/Debug/netcoreapp3.1/Newtonsoft.Jso
 Employee application/Employee application/bin/Debug/netcoreapp3.1/System.Net.Http.Formatting.dll
 
 WebAPISupport/.vs/WebAPISupport/DesignTimeBuild/.dtbcache.v2
+
+Employee application/Employee application/bin/Debug/netcoreapp3.1/Employee application.deps.json
