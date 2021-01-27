@@ -135,7 +135,9 @@ function LoadRequestSupervisor() {
     {
         var issus = GetIssus(reporId);
         var client = GetClient(issus.clientId);
-        FillModel(issus, cliente);
+        var comment = GetComment(reportId);
+        var sopporter = GetSupporter();
+        FillModel(issus, cliente, comment,sopporter);
     }
 
 
@@ -179,34 +181,67 @@ function LoadRequestSupervisor() {
         return result;
     }
 
-function FillModel(issus, client) {
+function FillModel(issue, client, comment, supporter) {
+    document.getElementById(' ').value = issue.reportId;
+    document.getElementById(' ').value = client.name;
+    document.getElementById(' ').value = issue.reportDescripcion;
+    document.getElementById(' ').value = client.email;
+    document.getElementById(' ').value = client.phone;
+    document.getElementById(' ').value = client.secondPhone;
+    document.getElementById(' ').value = issus.status;
+   //combo box para asignar el soportista
+    document.getElementById(' ').value = comment.description;
     document.getElementById(' ').value = client.
-    document.getElementById(' ').value = client.
-    document.getElementById(' ').value = client.
-    document.getElementById(' ').value = client.
-    document.getElementById(' ').value = client.
-    document.getElementById(' ').value = client.
-    document.getElementById(' ').value = client.
-    document.getElementById(' ').value = client.
- // hacia abajo los del reporte hacia rriba los del cliente
-    document.getElementById(' ').value = issus.
-    document.getElementById(' ').value = issus.
-    document.getElementById(' ').value = issus.
-    document.getElementById(' ').value = issus.
-    document.getElementById(' ').value = issus.
-    document.getElementById(' ').value = issus.
-    document.getElementById(' ').value = issus.
-    document.getElementById(' ').value = issus.
-    document.getElementById(' ').value = issus.
          
     }
 
-function SolveReportSupervisor() {
 
+function GetComment(reportId) {
+
+    $.ajax({
+        url: "/Home/Metodo para obtener el comentario del reporte",
+        data: JSON.stringify(reportId),
+        type: "GET",
+        contentType: "application/json;charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+
+
+        },
+        error: function (errorMessage) {
+            alert(errorMessage.responseText);
+        }
+    });
+
+    return result;
+
+}
+
+function GetSupporter() {
+
+    $.ajax({
+        url: "/Home/Metodo para extraer a todos los soportistas",
+        type: "GET",
+        contentType: "application/json;charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+
+        },
+        error: function (errorMessage) {
+            alert(errorMessage.responseText);
+        }
+    });
+
+    return result;
 
 }
 
 
+function AssignReport() {
+    var modelcomboAssign = document.getElementById('');
+    var modelReporId = document.getElementById('');
+    var model
+}
 
 function LoadRequestSupporter(idSupporter) {
     $.ajax({
