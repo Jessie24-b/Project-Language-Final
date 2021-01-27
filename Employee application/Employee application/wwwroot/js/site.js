@@ -104,15 +104,12 @@ function CheckLogin() {
             //confirmacion de contraseña incorrecta 
         }
 }
-<<<<<<< Updated upstream
 
-=======
-*/
->>>>>>> Stashed changes
 
-function LoadRequest() {
+
+function LoadRequestSupervisor() {
     $.ajax({
-        url: "/Home/GetRequest-metodo de controller que trae las solicitudes",
+        url: "/Home/GetRequestSupervisor-metodo de controller que trae las solicitudes",
         type: "GET",
         contentType: "application/json;charset=utf-8",
         dataType: "json",
@@ -120,21 +117,10 @@ function LoadRequest() {
             var html = '';
             $.each(result, function (key, item) {
                 html += '<tr>';
-<<<<<<< Updated upstream
                 html += '<td>' + item.reportId + '</td>';
-                html += '<td>' + item.reportClasification + '</td>';
-                html += '<td>' + item.full + '</td>';
+                html += '<td>' + item.reportDescription + '</td>';
                 html += '<td>' + item.reportDataTime + '</td>';
-                //falta hacer metodos que mandarian la asignacion de la consulta a sus respectivos soportistas
-                html += '<td><a href="#"  onclick="ViewRequest(' + item.reportId + ')">Solve</a> </td>';
-=======
-                html += '<td>' + item.clientId + '</td>';
-                html += '<td>' + item.clientName + '</td>';
-                html += '<td>' + item.reportId + '</td>';
-                html += '<td>' + item.reportClasification + '</td>';
-                html += '<td>' + item.reportDataTime + '</td>';
-                html += '<td><a href="#"  onclick="Resolver consulta(' + item.reportId + ')">Solve</a> | <a href="#" onclick="asignar consulta(' + item.reportId + ')">To Assign</a></td>';
->>>>>>> Stashed changes
+                html += '<td><a href="#"  onclick="ViewRequest(' + item.reportId + ')">View</a> </td>';
             });
             $('.tbody').html(html);
 
@@ -143,13 +129,108 @@ function LoadRequest() {
             alert(errorMessage.responseText);
         }
     })
+}
 
-<<<<<<< Updated upstream
+    function GetModel(reportId)
+    {
+        var issus = GetIssus(reporId);
+        var client = GetClient(issus.clientId);
+        FillModel(issus, cliente);
+    }
+
+
+    function GetIssus(reportId)
+    {
+        $.ajax({
+            url: "/Home/Metodo para obtener el reporte en controller",
+            data: JSON.stringify(reportId),
+            type: "GET",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) { 
+
+
+            },
+            error: function (errorMessage) {
+                alert(errorMessage.responseText);
+            }
+        });
+
+        return result;
+    }
+
+    function GetIssus(clientId) {
+
+        $.ajax({
+            url: "/Home/Metodo para obtener al cliente en la controller",
+            data: JSON.stringify(clientId),
+            type: "GET",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+
+
+            },
+            error: function (errorMessage) {
+                alert(errorMessage.responseText);
+            }
+        });
+
+        return result;
+    }
+
+function FillModel(issus, client) {
+    document.getElementById(' ').value = client.
+    document.getElementById(' ').value = client.
+    document.getElementById(' ').value = client.
+    document.getElementById(' ').value = client.
+    document.getElementById(' ').value = client.
+    document.getElementById(' ').value = client.
+    document.getElementById(' ').value = client.
+    document.getElementById(' ').value = client.
+ // hacia abajo los del reporte hacia rriba los del cliente
+    document.getElementById(' ').value = issus.
+    document.getElementById(' ').value = issus.
+    document.getElementById(' ').value = issus.
+    document.getElementById(' ').value = issus.
+    document.getElementById(' ').value = issus.
+    document.getElementById(' ').value = issus.
+    document.getElementById(' ').value = issus.
+    document.getElementById(' ').value = issus.
+    document.getElementById(' ').value = issus.
+         
+    }
+
+function SolveReportSupervisor() {
+
+
 }
 
 
+
+function LoadRequestSupporter(idSupporter) {
+    $.ajax({
+        url: "/Home/GetRequestSopporter",
+        data: JSON.stringify(reportId),
+        type: "GET",
+        contentType: "application/json;charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            var html = '';
+            $.each(result, function (key, item) {
+                html += '<tr>';
+                html += '<td>' + item.reportId + '</td>';
+                html += '<td>' + item.reportClasification + '</td>';
+                html += '<td>' + item.reportDataTime + '</td>';
+                html += '<td><a href="#"  onclick="ViewRequest(' + item.reportId + ')">View</a> </td>';
+            });
+            $('.tbody').html(html);
+
+        },
+        error: function (errorMessage) {
+            alert(errorMessage.responseText);
+        }
+    })
+}
 
 */
-=======
-}
->>>>>>> Stashed changes
