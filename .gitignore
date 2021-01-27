@@ -58,3 +58,15 @@ Employee application/Employee application/obj/Debug/netcoreapp3.1/Employee appli
 Employee application/Employee application/bin/Debug/netcoreapp3.1/Employee application.exe
 
 Employee application/Employee application/obj/Debug/netcoreapp3.1/apphost.exe
+
+WebAPISupport/.vs/WebAPISupport/v16/.suo
+
+WebAPISupport/WebAPISupport/obj/project.assets.json
+
+WebAPISupport/WebAPISupport/obj/project.nuget.cache
+
+WebAPISupport/WebAPISupport/obj/WebAPISupport.csproj.nuget.dgspec.json
+
+WebAPISupport/WebAPISupport/obj/Debug/netcoreapp3.1/WebAPISupport.assets.cache
+
+WebAPISupport/WebAPISupport/obj/Debug/netcoreapp3.1/WebAPISupport.csprojAssemblyReference.cache
