@@ -70,3 +70,17 @@ WebAPISupport/WebAPISupport/obj/WebAPISupport.csproj.nuget.dgspec.json
 WebAPISupport/WebAPISupport/obj/Debug/netcoreapp3.1/WebAPISupport.assets.cache
 
 WebAPISupport/WebAPISupport/obj/Debug/netcoreapp3.1/WebAPISupport.csprojAssemblyReference.cache
+
+WebAPISupport/.vs/WebAPISupport/config/applicationhost.config
+
+WebAPISupport/WebAPISupport/bin/Debug/netcoreapp3.1/WebAPISupport.dll
+
+WebAPISupport/WebAPISupport/bin/Debug/netcoreapp3.1/WebAPISupport.pdb
+
+WebAPISupport/WebAPISupport/obj/Debug/netcoreapp3.1/WebAPISupport.csproj.FileListAbsolute.txt
+
+WebAPISupport/WebAPISupport/obj/Debug/netcoreapp3.1/WebAPISupport.dll
+
+WebAPISupport/WebAPISupport/obj/Debug/netcoreapp3.1/WebAPISupport.genruntimeconfig.cache
+
+WebAPISupport/WebAPISupport/obj/Debug/netcoreapp3.1/WebAPISupport.pdb
