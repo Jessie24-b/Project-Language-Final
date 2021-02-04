@@ -8,22 +8,93 @@ $(document).ready(function () {
 });
 
 function CargarCombo() {
-    var array = ["Supervisor", "Soportista"];
-    var combo = document.getElementById('ocupation-employed');
+    var array = ["Supervisor", "Soportista", "prueba1", "prueba2", "prueba3", "prueba4"];
+    var combo = document.getElementById('ocupation-employee');
 
     for (var i = 0; i < array.length; i++) {
         var option2 = document.createElement("option");
-        option.value = array[i].ToString();
-        option.text = array[i].ToString();
-        combo.appendChild(option);
+        option2.value = array[i];
+        option2.text = array[i];
+        combo.appendChild(option2);
     }
 
 }
+
+
 
 function Mostrar() {
     document.getElementById("login").classList.add("hide");
     document.getElementById("all-information").classList.remove("hide");
 }
+
+function InsertEmployeeInServices(mobile_Phone, landline, cable, internet) {
+
+
+
+}
+
+function InsertEmployee() {
+
+
+    var employee = {
+        employeeName: $('#name-employee').val(),
+        employeeFirstName: $('#first-name-employee').val(),
+        employeeSecondName: $('#second-name-employee').val(),
+        employeeEmail: $('#email-employee').val(),
+        employeePassword: $('#input-employee').val(),
+        employeeOccupation: $('#ocupation-employee').val(),
+        employeeSupervisor: 1,
+        status: "iniciado",
+        userCreation: 1,
+        modificationUser: 1,
+    };
+
+
+    var mobile_Phone = document.getElementById('cbTelefonia-movil').checked;
+    var landline = document.getElementById('cbTelefonia-fija').checked;
+    var cable = document.getElementById('cbCable').checked;
+    var internet = document.getElementById('cbInternet').checked;
+
+  //  InsertEmployeeInServices(mobile_Phone, landline, cable, internet);
+
+
+
+    var password_confirmation = document.getElementById('confirm-input-employee').value;
+
+   // if (employee.password == password_confirmation) {
+
+    $.ajax({
+        url: "/Prueba/PostEmployee",
+        data: JSON.stringify(employee),
+        type: "POST",
+        contentType: "application/json;charset=utf-8",
+        dataType: "json",
+            success: function (result) { //aca recibo el resultado del backend (datos, objetos, mensajes, etc)
+
+                //funcion para borrar los campos
+                if (result == 1) {
+                    //falta llemado de result. atributo password del objeto esto solo es una suposicion
+                    if (password == result.password) {
+                        Mostrar();
+                    } else {
+                        //mensaje de contraseña equivocada o usuario no existe
+                    }
+
+                }
+
+            },
+            error: function (errorMessage) {
+                alert(errorMessage.responseText);
+            }
+        });
+    //} else {
+        //confirmacion de contraseña incorrecta 
+    //}
+}
+
+
+
+
 
 /*
 
@@ -58,52 +129,7 @@ function CheckLogin() {
 
 }
 
-    function InsertEmployee() 
-    {
-
-
-    var employee = {
-     fullName = $('#name-employee').value(),
-     firstName = $('#first-name-employee').value(),
-     secondName = $('#second-name-employee').value(),
-     email = $('#email-employee').value(),
-     password = $('#input-employee').value(),
-     ocupation = $('#input-employee').value(),
-     supervisor = $('#supervisor-employee').value(),
-     };
-
-    password-confirmation = $('#confirm-input-employee').value();
-    
-        if (employee.password == password - confirmation) {
-
-            $.ajax({
-                url: "/Home/Metodo para insertar employee(controlador)",
-                data: JSON.stringify(student),
-                type: "POST",
-                contentType: "application/json;charset=utf-8",
-                dataType: "json",
-                success: function (result) { //aca recibo el resultado del backend (datos, objetos, mensajes, etc)
-
-                    //funcion para borrar los campos
-                    if (result == 1) {
-                        //falta llemado de result. atributo password del objeto esto solo es una suposicion
-                        if (password == result.employeePassword) {
-                            Mostrar();
-                        } else {
-                            //mensaje de contraseña equivocada o usuario no existe
-                        }
-
-                    }
-
-                },
-                error: function (errorMessage) {
-                    alert(errorMessage.responseText);
-                }
-            });
-        } else {
-            //confirmacion de contraseña incorrecta 
-        }
-}
+  
 
 
 

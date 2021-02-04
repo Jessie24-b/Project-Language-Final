@@ -8,55 +8,57 @@ namespace Employee_application.Models.Domain
     public class Employee
     {
 
-        private int employeeID;
-        private string name;
-        private string firstName;
-        private string secondName;
-        private string email;
-        private string password;
-        private string ocupation;
-        private int supervisor;
+        private int employeeId;
+        private string employeeName;
+        private string employeeFirstName;
+        private string employeeSecondName;
+        private string employeeEmail;
+        private string employeePassword;
+        private string employeeOccupation;
+        private int employeeSupervisor;
 
         //Auditorias 
         private string status;
         private DateTime dateCreation;
         private DateTime modificationDate;
         private int userCreation;
-        private int userModification;
+        private int modificationUser;
 
         public Employee()
         {
         }
 
-        public Employee(int employeeID, string name, string firstName, string secondName, string email, string password, string ocupation, int supervisor, string status, DateTime dateCreation, DateTime modificationDate, int userCreation, int userModification)
+        public Employee(int employeeId, string employeeName, string employeeFirstName, string employeeSecondName,
+            string employeeEmail, string employeePassword, string employeeOccupation, int employeeSupervisor,
+            string status, DateTime dateCreation, DateTime modificationDate, int userCreation, int modificationUser)
         {
-            this.employeeID = employeeID;
-            this.name = name;
-            this.firstName = firstName;
-            this.secondName = secondName;
-            this.email = email;
-            this.password = password;
-            this.ocupation = ocupation;
-            this.supervisor = supervisor;
-            this.status = status;
-            this.dateCreation = dateCreation;
-            this.modificationDate = modificationDate;
-            this.userCreation = userCreation;
-            this.userModification = userModification;
+            EmployeeId = employeeId;
+            this.EmployeeName = employeeName;
+            this.EmployeeFirstName = employeeFirstName;
+            this.EmployeeSecondName = employeeSecondName;
+            this.EmployeeEmail = employeeEmail;
+            this.EmployeePassword = employeePassword;
+            this.EmployeeOccupation = employeeOccupation;
+            this.EmployeeSupervisor = employeeSupervisor;
+            this.Status = status;
+            this.DateCreation = dateCreation;
+            this.ModificationDate = modificationDate;
+            this.UserCreation = userCreation;
+            this.ModificationUser = modificationUser;
         }
 
-        public int EmployeeID { get => employeeID; set => employeeID = value; }
-        public string Name { get => name; set => name = value; }
-        public string FirstName { get => firstName; set => firstName = value; }
-        public string SecondName { get => secondName; set => secondName = value; }
-        public string Email { get => email; set => email = value; }
-        public string Password { get => password; set => password = value; }
-        public string Ocupation { get => ocupation; set => ocupation = value; }
-        public int Supervisor { get => supervisor; set => supervisor = value; }
+        public int EmployeeId { get => employeeId; set => employeeId = value; }
+        public string EmployeeName { get => employeeName; set => employeeName = value; }
+        public string EmployeeFirstName { get => employeeFirstName; set => employeeFirstName = value; }
+        public string EmployeeSecondName { get => employeeSecondName; set => employeeSecondName = value; }
+        public string EmployeeEmail { get => employeeEmail; set => employeeEmail = value; }
+        public string EmployeePassword { get => employeePassword; set => employeePassword = value; }
+        public string EmployeeOccupation { get => employeeOccupation; set => employeeOccupation = value; }
+        public int EmployeeSupervisor { get => employeeSupervisor; set => employeeSupervisor = value; }
         public string Status { get => status; set => status = value; }
         public DateTime DateCreation { get => dateCreation; set => dateCreation = value; }
         public DateTime ModificationDate { get => modificationDate; set => modificationDate = value; }
         public int UserCreation { get => userCreation; set => userCreation = value; }
-        public int UserModification { get => userModification; set => userModification = value; }
+        public int ModificationUser { get => modificationUser; set => modificationUser = value; }
     }
 }
