@@ -10,8 +10,6 @@ namespace Employee_application.Models.Domain
 
         private int employeeId;
         private string employeeName;
-        private string employeeFirstName;
-        private string employeeSecondName;
         private string employeeEmail;
         private string employeePassword;
         private string employeeOccupation;
@@ -28,14 +26,10 @@ namespace Employee_application.Models.Domain
         {
         }
 
-        public Employee(int employeeId, string employeeName, string employeeFirstName, string employeeSecondName,
-            string employeeEmail, string employeePassword, string employeeOccupation, int employeeSupervisor,
-            string status, DateTime dateCreation, DateTime modificationDate, int userCreation, int modificationUser)
+        public Employee(int employeeId, string employeeName, string employeeEmail, string employeePassword, string employeeOccupation, int employeeSupervisor, string status, DateTime dateCreation, DateTime modificationDate, int userCreation, int modificationUser)
         {
-            EmployeeId = employeeId;
+            this.EmployeeId = employeeId;
             this.EmployeeName = employeeName;
-            this.EmployeeFirstName = employeeFirstName;
-            this.EmployeeSecondName = employeeSecondName;
             this.EmployeeEmail = employeeEmail;
             this.EmployeePassword = employeePassword;
             this.EmployeeOccupation = employeeOccupation;
@@ -49,8 +43,6 @@ namespace Employee_application.Models.Domain
 
         public int EmployeeId { get => employeeId; set => employeeId = value; }
         public string EmployeeName { get => employeeName; set => employeeName = value; }
-        public string EmployeeFirstName { get => employeeFirstName; set => employeeFirstName = value; }
-        public string EmployeeSecondName { get => employeeSecondName; set => employeeSecondName = value; }
         public string EmployeeEmail { get => employeeEmail; set => employeeEmail = value; }
         public string EmployeePassword { get => employeePassword; set => employeePassword = value; }
         public string EmployeeOccupation { get => employeeOccupation; set => employeeOccupation = value; }

@@ -21,17 +21,17 @@ namespace WebAPISupport.Controllers
         }
 
         // GET: api/Service
-        [HttpGet]
+        [Route("[action]")]
         public async Task<ActionResult<IEnumerable<Service>>> GetServices()
         {
-            return await _context.Services.ToListAsync();
+            return await _context.Service.ToListAsync();
         }
 
         // GET: api/Service/5
-        [HttpGet("{id}")]
+        [Route("[action]")]
         public async Task<ActionResult<Service>> GetService(int id)
         {
-            var service = await _context.Services.FindAsync(id);
+            var service = await _context.Service.FindAsync(id);
 
             if (service == null)
             {
@@ -44,7 +44,7 @@ namespace WebAPISupport.Controllers
         // PUT: api/Service/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
+        [Route("[action]")]
         public async Task<IActionResult> PutService(int id, Service service)
         {
             if (id != service.ServiceId)
@@ -76,26 +76,26 @@ namespace WebAPISupport.Controllers
         // POST: api/Service
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost]
+        [Route("[action]")]
         public async Task<ActionResult<Service>> PostService(Service service)
         {
-            _context.Services.Add(service);
+            _context.Service.Add(service);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetService", new { id = service.ServiceId }, service);
         }
 
         // DELETE: api/Service/5
-        [HttpDelete("{id}")]
+        [Route("[action]")]
         public async Task<ActionResult<Service>> DeleteService(int id)
         {
-            var service = await _context.Services.FindAsync(id);
+            var service = await _context.Service.FindAsync(id);
             if (service == null)
             {
                 return NotFound();
             }
 
-            _context.Services.Remove(service);
+            _context.Service.Remove(service);
             await _context.SaveChangesAsync();
 
             return service;
@@ -103,7 +103,7 @@ namespace WebAPISupport.Controllers
 
         private bool ServiceExists(int id)
         {
-            return _context.Services.Any(e => e.ServiceId == id);
+            return _context.Service.Any(e => e.ServiceId == id);
         }
     }
 }

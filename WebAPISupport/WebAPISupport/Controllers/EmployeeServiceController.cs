@@ -21,17 +21,17 @@ namespace WebAPISupport.Controllers
         }
 
         // GET: api/EmployeeService
-        [HttpGet]
+        [Route("[action]")]
         public async Task<ActionResult<IEnumerable<EmployeeService>>> GetEmployeeServices()
         {
-            return await _context.EmployeeServices.ToListAsync();
+            return await _context.EmployeeService.ToListAsync();
         }
 
         // GET: api/EmployeeService/5
-        [HttpGet("{id}")]
+        [Route("[action]")]
         public async Task<ActionResult<EmployeeService>> GetEmployeeService(int id)
         {
-            var employeeService = await _context.EmployeeServices.FindAsync(id);
+            var employeeService = await _context.EmployeeService.FindAsync(id);
 
             if (employeeService == null)
             {
@@ -41,10 +41,18 @@ namespace WebAPISupport.Controllers
             return employeeService;
         }
 
+        [Route("[action]/{id}")]
+        public  List<EmployeeService> GetEmployeeServiceByIdService(int id)
+        {
+
+            return _context.EmployeeService.Where(a => a.ServiceId == id).ToList(); ;
+        }
+
+
         // PUT: api/EmployeeService/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
+        [Route("[action]")]
         public async Task<IActionResult> PutEmployeeService(int id, EmployeeService employeeService)
         {
             if (id != employeeService.EmployeeId)
@@ -76,10 +84,10 @@ namespace WebAPISupport.Controllers
         // POST: api/EmployeeService
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost]
+        [Route("[action]")]
         public async Task<ActionResult<EmployeeService>> PostEmployeeService(EmployeeService employeeService)
         {
-            _context.EmployeeServices.Add(employeeService);
+            _context.EmployeeService.Add(employeeService);
             try
             {
                 await _context.SaveChangesAsync();
@@ -100,16 +108,16 @@ namespace WebAPISupport.Controllers
         }
 
         // DELETE: api/EmployeeService/5
-        [HttpDelete("{id}")]
+        [Route("[action]")]
         public async Task<ActionResult<EmployeeService>> DeleteEmployeeService(int id)
         {
-            var employeeService = await _context.EmployeeServices.FindAsync(id);
+            var employeeService = await _context.EmployeeService.FindAsync(id);
             if (employeeService == null)
             {
                 return NotFound();
             }
 
-            _context.EmployeeServices.Remove(employeeService);
+            _context.EmployeeService.Remove(employeeService);
             await _context.SaveChangesAsync();
 
             return employeeService;
@@ -117,7 +125,7 @@ namespace WebAPISupport.Controllers
 
         private bool EmployeeServiceExists(int id)
         {
-            return _context.EmployeeServices.Any(e => e.EmployeeId == id);
+            return _context.EmployeeService.Any(e => e.EmployeeId == id);
         }
     }
 }

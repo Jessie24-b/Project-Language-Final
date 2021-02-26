@@ -9,41 +9,41 @@ namespace Employee_application.Models.Domain
     {
         private string noteDescription;
         private DateTime noteTime;
-        private int employeeID;
-        private int issueID;
+        private int employeeId;
+        private int issueId;
 
         //Auditorias 
         private string status;
         private DateTime dateCreation;
         private DateTime modificationDate;
         private int userCreation;
-        private int userModification;
+        private int modificationUser;
 
         public Note()
         {
         }
 
-        public Note(string noteDescription, DateTime noteTime, int employeeID, int issueID, string status, DateTime dateCreation, DateTime modificationDate, int userCreation, int userModification)
+        public Note(string noteDescription, DateTime noteTime, int employeeId, int issueId, string status, DateTime dateCreation, DateTime modificationDate, int userCreation, int modificationUser)
         {
-            this.noteDescription = noteDescription;
-            this.noteTime = noteTime;
-            this.employeeID = employeeID;
-            this.issueID = issueID;
-            this.status = status;
-            this.dateCreation = dateCreation;
-            this.modificationDate = modificationDate;
-            this.userCreation = userCreation;
-            this.userModification = userModification;
+            this.NoteDescription = noteDescription;
+            this.NoteTime = noteTime;
+            this.EmployeeId = employeeId;
+            this.IssueId = issueId;
+            this.Status = status;
+            this.DateCreation = dateCreation;
+            this.ModificationDate = modificationDate;
+            this.UserCreation = userCreation;
+            this.ModificationUser = modificationUser;
         }
 
         public string NoteDescription { get => noteDescription; set => noteDescription = value; }
         public DateTime NoteTime { get => noteTime; set => noteTime = value; }
-        public int EmployeeID { get => employeeID; set => employeeID = value; }
-        public int IssueID { get => issueID; set => issueID = value; }
+        public int EmployeeId { get => employeeId; set => employeeId = value; }
+        public int IssueId { get => issueId; set => issueId = value; }
         public string Status { get => status; set => status = value; }
         public DateTime DateCreation { get => dateCreation; set => dateCreation = value; }
         public DateTime ModificationDate { get => modificationDate; set => modificationDate = value; }
         public int UserCreation { get => userCreation; set => userCreation = value; }
-        public int UserModification { get => userModification; set => userModification = value; }
+        public int ModificationUser { get => modificationUser; set => modificationUser = value; }
     }
 }

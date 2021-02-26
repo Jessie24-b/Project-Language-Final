@@ -1077,10 +1077,144 @@ https://templatemo.com/tm-516-known
     display: none;
 }
 
+.Issue{
+    background: #08f8ef;
+}
+
+.myModal {
+    background-color:aquamarine;
+}
+
+.table1{
+    border-color:azure;
+}
+
+.margin-label{
+    margin-left: 25%;
+}
+.margin-label2 {
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+#lemployee-in-charge {
+    margin-top: 2%;
+    margin-left: 32%;
+}
+
+#employee-in-charge {
+    margin-left: 37%;
+    width: 250px;
+    height:30px;
+}
+
+.margin-input {
+    margin-left: 10%;
+}
+
+#report-number, #report-number2 {
+    width: 50px;
+}
+
+#description, #description2 {
+    width: 200px;
+    height: 50px;
+}
+
+#status, #classification, #status2, #classification2 {
+    width: 100px;
+}
+
+#user #user2 {
+    width: 200px;
+}
+
+#contact-email #contact-email2 {
+    width: 250px;
+}
+
+.text-area {
+    width: 250px;
+    height: 70px;
+}
+
+#comments2 {
+    width: 600px;
+    height: 200px;
+}
+
+#register-employee {
+    height: 630px;
+}
 
 
+#table-new-information {
+    border: 0;
+    width: 100%
+}
+
+.th-id {
+    width: 54px;
+}
+
+#id-employee2 {
+    width: 100%;
+    height: 36px;
+}
+
+.th-name {
+    width: 322px;
+}
+
+#new-name {
+    width: 100%;
+    height: 36px;
+}
+
+.th-email {
+    width: 277px;
+}
+
+#new-email {
+    width: 100%;
+    height: 36px;
+}
 
 
+.th-ocupation {
+    width: 145px;
+}
+#new-ocupation {
+    width: 100%;
+    height: 36px;
+}
 
+.th-supervisor {
+    width: 180px;
+}
+
+#new-supervisor {
+    width: 100%;
+    height: 36px;
+}
+
+#save-new-information {
+    width: 100%;
+    height: 36px;
+}
+
+#home{
+    margin-top: 50px;
+    height:100px;
+}
+
+#employee-information{
+    /*border: 0;*/
+    width: 100%;
+}
+
+.employee-information{
+    margin-left: 10%;
+}
 
   

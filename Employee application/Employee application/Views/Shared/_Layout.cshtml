@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -25,6 +28,15 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/templatemo-style.css">
 
+    <!-- SCRIPTS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/site.js"></script>
+
+
 </head>
 <div class="container">
     <main role="main" class="pb-3">
@@ -34,40 +46,11 @@
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
 
-    <!-- LOGIN -->
-    <div id="login">
-        <section id="login-employee">
-            <div class="container">
-                <div id="centrar" class="row center section-size">
 
-                    <div id="login-employee-form" class="col-md-6 col-sm-12 center font-of-login">
-                        <div class="section-title center">
-                            <h2 class="color-white">Login Employees</h2>
-                        </div>
+    @if (@HttpContextAccessor.HttpContext.Session.GetString("employeeId") != null)
+    {
 
-                        <div class="col-md-12 col-sm-12 center">
-                            <input type="email" id="email-login" class="borders" placeholder="Enter email address" required="">
-                        </div>
-
-                        <div class="col-md-12 col-sm-12 center margin-top">
-                            <input type="password" id="password-employee" class="password-employee dimension borders" placeholder="Password" />
-
-                        </div>
-
-
-                        <div class="col-md-12 col-sm-12  margin-top">
-                            <button id="btn-login-employee" class="password-employee dimension borders" onclick="return Mostrar()">Log in</button>
-                            <button id="btn-cancel-login" class="password-employee dimension borders">Cancel Register</button>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div id="all-information" class="hide">
+    <div id="all-information">
         <!-- PRE LOADER -->
         <section class="preloader">
             <div class="spinner">
@@ -76,10 +59,6 @@
 
             </div>
         </section>
-
-
-
-
 
         <!-- MENU -->
         <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
@@ -99,8 +78,12 @@
                 <!-- MENU LINKS -->
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                        <li><a href="#top" class="smoothScroll">Home</a></li>
-                        <li><a href="#register-employee" class="smoothScroll">Register Employee</a></li>
+                        <li><a href="#top" class="smoothScroll">My Information</a></li>
+                        <li id="li-issue" class="hide"><a href="#issues" class="smoothScroll">Issues</a></li>
+                        <li id="li-list-employees" class="hide"><a href="#list-employees" class="smoothScroll">List Employee</a></li>
+                        <li id="li-register-employee" class="hide"><a href="#register-employee" class="smoothScroll">Register Employee</a></li>
+                        <li><a href="#my-issues" class="smoothScroll">My Issues</a></li>
+
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -114,58 +97,12 @@
 
         <!-- HOME -->
         <section id="home">
-            <div class="row">
-
-                <div class="owl-carousel owl-theme home-slider">
-                    <div class="item item-first">
-                        <div class="caption">
-                            <div class="container">
-                                <div class="col-md-6 col-sm-12">
-                                    <h1>Distance Learning Education Center</h1>
-                                    <h3>Our online courses are designed to fit in your industry supporting all-round with latest technologies.</h3>
-                                    <a href="#feature" class="section-btn btn btn-default smoothScroll">Discover more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item item-second">
-                        <div class="caption">
-                            <div class="container">
-                                <div class="col-md-6 col-sm-12">
-                                    <h1>Start your journey with our practical courses</h1>
-                                    <h3>Our online courses are built in partnership with technology leaders and are designed to meet industry demands.</h3>
-                                    <a href="#courses" class="section-btn btn btn-default smoothScroll">Take a course</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item item-third">
-                        <div class="caption">
-                            <div class="container">
-                                <div class="col-md-6 col-sm-12">
-                                    <h1>Efficient Learning Methods</h1>
-                                    <h3>Nam eget sapien vel nibh euismod vulputate in vel nibh. Quisque eu ex eu urna venenatis sollicitudin ut at libero. Visit <a rel="nofollow" href="https://www.facebook.com/templatemo">templatemo</a> page.</h3>
-                                    <a href="#contact" class="section-btn btn btn-default smoothScroll">Let's chat</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- STUDENTS -->
-        <section id="students">
             <div class="container">
                 <div class="row">
-                    <div class="section-title">
-                        <h2>Students</h2>
-                    </div>
-                    <div class="col-md-12 col-sm-12">
+
+                    <div>
                         <div class="table-responsive">
-                            <table class="table table-bordered table-hover" id="table">
+                            <table id="employee-information">
 
                                 <thead>
                                     <tr>
@@ -173,20 +110,87 @@
                                             ID
                                         </th>
                                         <th>
-                                            Name
+                                            <label class="employee-information">Name</label>
+
                                         </th>
                                         <th>
-                                            Email
+
+                                            <label class="employee-information">Email</label>
                                         </th>
                                         <th>
-                                            Password
+
+                                            <label class="employee-information">Ocupation</label>
+                                        </th>
+                                        <th>
+                                            <label class="employee-information">Supervisor</label>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>
+                                        <input type="text" id="e-id" value="@HttpContextAccessor.HttpContext.Session.GetString("employeeId")" />
+                                    </td>
+
+                                    <td>
+                                        <input type="text" id="e-name" class="employee-information" />
+                                    </td>
+
+                                    <td>
+                                        <input type="text" id="e-email" class="employee-information" />
+                                    </td>
+
+                                    <td>
+                                        <input type="text" id="e-ocupation" class="employee-information" />
+                                    </td>
+
+                                    <td>
+                                        <input type="text" id="e-supervisor" class="employee-information" />
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <script language='JavaScript' type='text/javascript'>
+            Mostrar(this);
+        </script>
+
+        <!-- Issue -->
+        <section id="issues" class="Issue hide">
+            <div class="container">
+                <div class="row center">
+
+                    <div class="section-title center">
+                        <h2>Issues</h2>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="">
+                            <table class="table table-bordered table-hover" id="table">
+
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            ID_Problem
+                                        </th>
+                                        <th>
+                                            Tipo del Servicio
+                                        </th>
+                                        <th>
+                                            Fecha
                                         </th>
                                         <th>
                                             Action
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody class="tbody">
+
+                                <tbody class="info-issues">
                                 </tbody>
                             </table>
 
@@ -199,8 +203,217 @@
             </div>
         </section>
 
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog section-size" role="document">
+                <div class="modal-content myModal">
+                    <div class="modal-header ">
+                        <h2 class="modal-title center" id="exampleModalLabel">ISSUES</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <table class="section-size">
+                                <tr>
+                                    <td>
+                                        <label for="message-text" id="lreport-number" class="col-form-label margin-label">Report Number</label><br>
+                                        <input type="text" id="report-number" class="margin-label" readonly />
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="ldescription" class="col-form-label margin-label">Description </label>
+                                        <textarea id="descrption" class="margin-label" readonly></textarea>
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="lregister-timestamp" class="col-form-label margin-label">Report Timestamp </label>
+                                        <input type="text" id="register-timestamp" class="margin-label" readonly />
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="lstatus" class="col-form-label margin-label">Status</label><br>
+                                        <input type="text" id="status" class="margin-label" readonly />
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <label for="message-text" id="luser" class="col-form-label margin-label2">User name</label>
+                                        <input type="text" id="user" class="margin-label" readonly />
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="lcontact-phone" class="col-form-label margin-label2">Phone Number</label>
+                                        <input type="text" id="contact-phone" class="margin-label" readonly />
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="lcontact-email" class="col-form-label margin-label2">Email</label><br />
+                                        <input type="email" id="contact-email" class="margin-label" readonly />
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="laddress" class="col-form-label margin-label2">Address</label>
+                                        <textarea id="address" class="margin-label text-area" readonly></textarea>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <label for="message-text" id="lservice" class="col-form-label margin-label">Service</label>
+                                        <input type="text" id="service" class="margin-label" readonly />
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="lclassification" class="col-form-label margin-label">Classification</label><br>
+                                        <select id="classification" class="margin-label">
+                                            <option>Low</option>
+                                            <option>Median</option>
+                                            <option>High</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="lcomments" class="col-form-label margin-label2">Comments</label>
+                                        <textarea id="comments" class="margin-label text-area"></textarea>
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="lnotes" class="col-form-label margin-label2">Notes</label>
+                                        <textarea id="notes" class="margin-label text-area"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <label for="message-text" id="lemployee-in-charge" class="col-form-label">
+                                            If you want to entrust the issue to an employee, please select it.
+                                        </label>
+                                        <select id="employee-in-charge">
+                                            <option>None</option>
+                                        </select>
+
+                                    </td>
+                                </tr>
+
+                            </table>
+
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="return ToAssign()" data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-primary" onclick="return Solve()" data-dismiss="modal">Solve</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Employess -->
+        <section id="list-employees" class="hide">
+            <div class="container">
+                <div>
+                    <div class="row">
+                        <div class="section-title">
+                            <h2>Employees</h2>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover" id="table">
+
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                ID
+                                            </th>
+                                            <th>
+                                                Name
+                                            </th>
+                                            <th>
+                                                Email
+                                            </th>
+                                            <th>
+                                                Ocupation
+                                            </th>
+                                            <th>
+                                                ID Supervisor
+                                            </th>
+                                            <th>
+                                                Action
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="info-employees">
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-12 col-sm-12">
+
+                            <div class="table-responsive">
+
+                                <table id="table-new-information">
+
+                                    <thead>
+                                        <tr>
+                                            <th class="th-id">
+                                                ID
+                                            </th>
+                                            <th class="th-name">
+                                                Name
+                                            </th>
+                                            <th class="th-email">
+                                                Email
+                                            </th>
+                                            <th class="th-ocupation">
+                                                Ocupation
+                                            </th>
+                                            <th class="th-supervisor">
+                                                ID Supervisor
+                                            </th>
+                                            <th class="th-acction">
+                                                Action
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tr>
+                                        <td>
+                                            <input type="text" id="id-employee2" readonly />
+                                        </td>
+                                        <td>
+                                            <input type="text" id="new-name" />
+                                        </td>
+                                        <td>
+                                            <input type="email" id="new-email" readonly />
+                                        </td>
+                                        <td>
+                                            <select id="new-ocupation">
+                                                <option>Supervisor</option>
+                                                <option>Supporter</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="text" id="new-supervisor" />
+                                        </td>
+
+                                        <td>
+                                            <input type="submit" class="form-control" id="save-new-information" value="Save Information" onclick="return EditEmployee()">
+
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <!-- REGISTER RMPLOYEE -->
-        <section id="register-employee">
+        <section id="register-employee" class="Issue hide">
             <div class="container">
                 <div class="row">
 
@@ -219,16 +432,16 @@
                             <input type="email" id="email-employee" placeholder="Enter email address" required="">
                         </div>
                         <div class="col-md-12 col-sm-12 center margin-top">
-                            <input type="password" id="input-employee" class="input-employee dimension" placeholder="Password" />
-                            <input type="password" id="confirm-input-employee" class="input-employee dimension" placeholder="Confirm Password" />
+                            <input type="password" id="password2-employee" class="input-employee dimension" placeholder="Password" />
+                            <input type="password" id="confirm-password-employee" class="input-employee dimension" placeholder="Confirm Password" />
                         </div>
 
                         <div class="col-md-12 col-sm-12 center margin-top">
                             <select id="ocupation-employee" class="input-employee dimension">
-
+                                <option>Supervisor</option>
+                                <option>Supporter</option>
                             </select>
                             <select id="supervisor-employee" class="input-employee dimension">
-
                             </select>
                         </div>
 
@@ -248,6 +461,145 @@
                 </div>
             </div>
         </section>
+
+
+        <!-- My Issue -->
+        <section id="my-issues">
+            <div class="container">
+                <div class="row center">
+
+                    <div class="section-title center">
+                        <h2>My Issues</h2>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="">
+                            <table class="table table-bordered table-hover" id="table">
+
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            ID_Problem
+                                        </th>
+                                        <th>
+                                            Tipo del Servicio
+                                        </th>
+                                        <th>
+                                            Fecha
+                                        </th>
+                                        <th>
+                                            Action
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="info-my-issues">
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal my issues -->
+        <div class="modal fade" id="myModalIssues" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog section-size" role="document">
+                <div class="modal-content myModal">
+                    <div class="modal-header ">
+                        <h2 class="modal-title center">ISSUE</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <table class="section-size">
+                                <tr>
+                                    <td>
+                                        <label for="message-text" id="lreport-number2" class="col-form-label margin-label">Report Number</label><br>
+                                        <input type="text" id="report-number2" class="margin-label" readonly />
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="ldescription2" class="col-form-label margin-label">Description </label>
+                                        <textarea id="descrption2" class="margin-label" readonly></textarea>
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="lregister-timestamp2" class="col-form-label margin-label">Report Timestamp </label>
+                                        <input type="text" id="register-timestamp2" class="margin-label" readonly />
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="lstatus2" class="col-form-label margin-label">Status</label><br>
+                                        <input type="text" id="status2" class="margin-label" />
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <label for="message-text" id="luser2" class="col-form-label margin-label2">User name</label>
+                                        <input type="text" id="user2" class="margin-label" readonly />
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="lcontact-phone2" class="col-form-label margin-label2">Phone Number</label>
+                                        <input type="text" id="contact-phone2" class="margin-label" readonly />
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="lcontact-email2" class="col-form-label margin-label2">Email</label><br />
+                                        <input type="email" id="contact-email2" class="margin-label" readonly />
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="laddress2" class="col-form-label margin-label2">Address</label>
+                                        <textarea id="address2" class="margin-label text-area" readonly></textarea>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <label for="message-text" id="lservice2" class="col-form-label margin-label">Service</label>
+                                        <input type="text" id="service2" class="margin-label" readonly />
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="lclassification2" class="col-form-label margin-label">Classification</label><br>
+                                        <select id="classification2" class="margin-label">
+                                            <option>Low</option>
+                                            <option>Median</option>
+                                            <option>High</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="lnotes2" class="col-form-label margin-label2">Notes</label>
+                                        <textarea id="notes2" class="margin-label text-area"></textarea>
+                                    </td>
+                                    <td>
+                                        <label for="message-text" id="lresolution-comments2" class="col-form-label margin-label2">Resolution Comment</label>
+                                        <textarea id="resolution-comments2" class="margin-label text-area"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center" colspan="4">
+                                        <label for="message-text" id="lcomments2" class="col-form-label"> Comments </label><br />
+                                        <textarea id="comments2"></textarea>
+
+                                    </td>
+                                </tr>
+
+                            </table>
+
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-primary" onclick="return SolveMyIssues()" data-dismiss="modal">Solve</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -326,15 +678,8 @@
 
     </div>
 
-
-
-    <!-- SCRIPTS -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/site.js"></script>
+    }
 
 </body>
 </html>
+

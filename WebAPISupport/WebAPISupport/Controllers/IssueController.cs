@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +12,7 @@ using WebAPISupport.Models;
 namespace WebAPISupport.Controllers
 {
     [Route("api/[controller]")]
+    [AllowAnonymous]
     [ApiController]
     public class IssueController : ControllerBase
     {
@@ -21,17 +24,17 @@ namespace WebAPISupport.Controllers
         }
 
         // GET: api/Issue
-        [HttpGet]
+        [Route("[action]")]
         public async Task<ActionResult<IEnumerable<Issue>>> GetIssues()
         {
-            return await _context.Issues.ToListAsync();
+            return await _context.Issue.ToListAsync();
         }
 
         // GET: api/Issue/5
-        [HttpGet("{id}")]
+        [Route("[action]")]
         public async Task<ActionResult<Issue>> GetIssue(int id)
         {
-            var issue = await _context.Issues.FindAsync(id);
+            var issue = await _context.Issue.FindAsync(id);
 
             if (issue == null)
             {
@@ -44,7 +47,7 @@ namespace WebAPISupport.Controllers
         // PUT: api/Issue/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
+        [Route("[action]")]
         public async Task<IActionResult> PutIssue(int id, Issue issue)
         {
             if (id != issue.ReportId)
@@ -74,28 +77,40 @@ namespace WebAPISupport.Controllers
         }
 
         // POST: api/Issue
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost]
+        [Route("[action]")]
         public async Task<ActionResult<Issue>> PostIssue(Issue issue)
         {
-            _context.Issues.Add(issue);
-            await _context.SaveChangesAsync();
+            _context.Issue.Add(issue);
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (IssueExists(issue.ReportId))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
 
             return CreatedAtAction("GetIssue", new { id = issue.ReportId }, issue);
         }
 
         // DELETE: api/Issue/5
-        [HttpDelete("{id}")]
+        [Route("[action]")]
         public async Task<ActionResult<Issue>> DeleteIssue(int id)
         {
-            var issue = await _context.Issues.FindAsync(id);
+            var issue = await _context.Issue.FindAsync(id);
             if (issue == null)
             {
                 return NotFound();
             }
 
-            _context.Issues.Remove(issue);
+            _context.Issue.Remove(issue);
             await _context.SaveChangesAsync();
 
             return issue;
@@ -103,7 +118,34 @@ namespace WebAPISupport.Controllers
 
         private bool IssueExists(int id)
         {
-            return _context.Issues.Any(e => e.ReportId == id);
+            return _context.Issue.Any(e => e.ReportId == id);
         }
+
+        [EnableCors("GetAllPolicy")]
+        [Route("[action]")]
+        public async Task<ActionResult<Issue>> getIssue2(Issue2 issue2)
+        {
+            Issue issue = null;
+            _context.Issue.Add(issue);
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (IssueExists(issue.ReportId))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return CreatedAtAction("GetIssue", new { id = issue.ReportId }, issue);
+        }
+
+
     }
 }

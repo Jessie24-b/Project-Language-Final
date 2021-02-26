@@ -21,17 +21,26 @@ namespace WebAPISupport.Controllers
         }
 
         // GET: api/Note
-        [HttpGet]
+        [Route("[action]")]
         public async Task<ActionResult<IEnumerable<Note>>> GetNotes()
         {
-            return await _context.Notes.ToListAsync();
+            return await _context.Note.ToListAsync();
+        }
+
+        
+        [Route("[action]/{id}")]
+        public Note GetNoteForIssue(int id)
+        {
+            var student = _context.Note.Where(a => a.IssueId.Equals(id)).First();
+            return student;
+
         }
 
         // GET: api/Note/5
-        [HttpGet("{id}")]
+        [Route("[action]")]
         public async Task<ActionResult<Note>> GetNote(int id)
         {
-            var note = await _context.Notes.FindAsync(id);
+            var note = await _context.Note.FindAsync(id);
 
             if (note == null)
             {
@@ -44,10 +53,10 @@ namespace WebAPISupport.Controllers
         // PUT: api/Note/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
+        [Route("[action]/{id}")]
         public async Task<IActionResult> PutNote(int id, Note note)
         {
-            if (id != note.EmployeeId)
+            if (id != note.IssueId)
             {
                 return BadRequest();
             }
@@ -76,10 +85,10 @@ namespace WebAPISupport.Controllers
         // POST: api/Note
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost]
+        [Route("[action]")]
         public async Task<ActionResult<Note>> PostNote(Note note)
         {
-            _context.Notes.Add(note);
+            _context.Note.Add(note);
             try
             {
                 await _context.SaveChangesAsync();
@@ -100,16 +109,16 @@ namespace WebAPISupport.Controllers
         }
 
         // DELETE: api/Note/5
-        [HttpDelete("{id}")]
+        [Route("[action]")]
         public async Task<ActionResult<Note>> DeleteNote(int id)
         {
-            var note = await _context.Notes.FindAsync(id);
+            var note = await _context.Note.FindAsync(id);
             if (note == null)
             {
                 return NotFound();
             }
 
-            _context.Notes.Remove(note);
+            _context.Note.Remove(note);
             await _context.SaveChangesAsync();
 
             return note;
@@ -117,7 +126,7 @@ namespace WebAPISupport.Controllers
 
         private bool NoteExists(int id)
         {
-            return _context.Notes.Any(e => e.EmployeeId == id);
+            return _context.Note.Any(e => e.EmployeeId == id);
         }
     }
 }

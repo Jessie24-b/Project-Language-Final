@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-#nullable disable
+// Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
+// If you have enabled NRTs for your project, then un-comment the following line:
+// #nullable disable
 
 namespace WebAPISupport.Models
 {
@@ -9,16 +11,14 @@ namespace WebAPISupport.Models
     {
         public Employee()
         {
-            EmployeeServices = new HashSet<EmployeeService>();
+            EmployeeService = new HashSet<EmployeeService>();
             InverseEmployeeSupervisorNavigation = new HashSet<Employee>();
-            Issues = new HashSet<Issue>();
-            Notes = new HashSet<Note>();
+            Issue = new HashSet<Issue>();
+            Note = new HashSet<Note>();
         }
 
         public int EmployeeId { get; set; }
         public string EmployeeName { get; set; }
-        public string EmployeeFirstName { get; set; }
-        public string EmployeeSecondName { get; set; }
         public string EmployeeEmail { get; set; }
         public string EmployeePassword { get; set; }
         public string EmployeeOccupation { get; set; }
@@ -30,9 +30,9 @@ namespace WebAPISupport.Models
         public int? ModificationUser { get; set; }
 
         public virtual Employee EmployeeSupervisorNavigation { get; set; }
-        public virtual ICollection<EmployeeService> EmployeeServices { get; set; }
+        public virtual ICollection<EmployeeService> EmployeeService { get; set; }
         public virtual ICollection<Employee> InverseEmployeeSupervisorNavigation { get; set; }
-        public virtual ICollection<Issue> Issues { get; set; }
-        public virtual ICollection<Note> Notes { get; set; }
+        public virtual ICollection<Issue> Issue { get; set; }
+        public virtual ICollection<Note> Note { get; set; }
     }
 }

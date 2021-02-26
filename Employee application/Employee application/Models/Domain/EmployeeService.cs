@@ -8,37 +8,37 @@ namespace Employee_application.Models.Domain
     public class EmployeeService
     {
 
-        private int employeeID;
-        private int serviceID;
+        private int employeeId;
+        private int serviceId;
 
         //Auditorias 
         private string status;
         private DateTime dateCreation;
         private DateTime modificationDate;
         private int userCreation;
-        private int userModification;
+        private int modificationUser;
 
         public EmployeeService()
         {
         }
 
-        public EmployeeService(int employeeID, int serviceID, string status, DateTime dateCreation, DateTime modificationDate, int userCreation, int userModification)
+        public EmployeeService(int employeeId, int serviceId, string status, DateTime dateCreation, DateTime modificationDate, int userCreation, int modificationUser)
         {
-            this.employeeID = employeeID;
-            this.serviceID = serviceID;
-            this.status = status;
-            this.dateCreation = dateCreation;
-            this.modificationDate = modificationDate;
-            this.userCreation = userCreation;
-            this.userModification = userModification;
+            this.EmployeeId = employeeId;
+            this.ServiceId = serviceId;
+            this.Status = status;
+            this.DateCreation = dateCreation;
+            this.ModificationDate = modificationDate;
+            this.UserCreation = userCreation;
+            this.ModificationUser = modificationUser;
         }
 
-        public int EmployeeID { get => employeeID; set => employeeID = value; }
-        public int ServiceID { get => serviceID; set => serviceID = value; }
+        public int EmployeeId { get => employeeId; set => employeeId = value; }
+        public int ServiceId { get => serviceId; set => serviceId = value; }
         public string Status { get => status; set => status = value; }
         public DateTime DateCreation { get => dateCreation; set => dateCreation = value; }
         public DateTime ModificationDate { get => modificationDate; set => modificationDate = value; }
         public int UserCreation { get => userCreation; set => userCreation = value; }
-        public int UserModification { get => userModification; set => userModification = value; }
+        public int ModificationUser { get => modificationUser; set => modificationUser = value; }
     }
 }

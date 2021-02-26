@@ -27,6 +27,19 @@ namespace WebAPISupport
         {
             services.AddControllers().AddNewtonsoftJson(options =>
             options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
+            services.AddCors(option2 =>
+            {
+                option2.AddPolicy("GetAllPolicy",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:4200", "http://localhost:4200/students", "http://localhost:4200/issue-add")
+                                             .AllowAnyHeader()
+                                             .AllowAnyMethod()//PUT, PATCH, GET, DELETE
+                                             .AllowAnyOrigin();
+                    });
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +55,8 @@ namespace WebAPISupport
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors();
 
             app.UseEndpoints(endpoints =>
             {

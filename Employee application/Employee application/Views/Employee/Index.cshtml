@@ -1,0 +1,72 @@
+﻿@model Employee_application.Models.Domain.Employee
+
+@{
+    Layout = null;
+}
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body>
+
+    <div>
+
+        @using (Html.BeginForm("Index", "Employee", FormMethod.Post))
+
+        {
+            <!-- LOGIN -->
+            <div id="login">
+                <section id="login-employee">
+                    <div class="container">
+                        <div id="centrar" class="row center section-size">
+
+                            <div id="login-employee-form" class="col-md-6 col-sm-12 center font-of-login">
+                                <div class="section-title center">
+                                    <h2 class="color-white">Login Employees</h2>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 center">
+                                    @* <input type="email" id="email-login" class="borders" placeholder="Enter email address" required="">*@
+                                    @Html.EditorFor(model => model.EmployeeEmail, new { htmlAttributes = new { @id = "email-login", @class = "borders", @placeholder = "Email" } })
+
+                                    @Html.ValidationMessageFor(model => model.EmployeeEmail, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 center margin-top">
+                                    @* <input type="password" id="password-employee" class="password-employee dimension borders" placeholder="Password" />*@
+
+                                    @Html.EditorFor(model => model.EmployeePassword, new { htmlAttributes = new { @id = "password-employee", @class = "password-employee dimension borders", @type = "password", @placeholder = "Password" } })
+
+                                    @Html.ValidationMessageFor(model => model.EmployeePassword, "", new { @class = "text-danger" })
+                                </div>
+
+
+                                <div class="col-md-12 col-sm-12  margin-top">
+                                    <input type="submit" id="btn-login-employee" value="Login" class="password-employee dimension borders" />                                  
+                                    <button id="btn-cancel-login" class="password-employee dimension borders" onclick="return Clear()">Cancel Register</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        }
+
+
+
+    </div>
+    <script src="js/site.js"></script>
+
+</body>
+
+</html>
